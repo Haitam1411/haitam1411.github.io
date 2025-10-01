@@ -74,6 +74,21 @@
       .experience-block h4 {
         color: var(--gold);
       }
+
+      /* Blinking cursor effect */
+      #typing-text::after {
+        content: "|";
+        display: inline-block;
+        margin-left: 5px;
+        animation: blink 0.7s infinite;
+        color: var(--gold);
+      }
+
+      @keyframes blink {
+        0% { opacity: 1; }
+        50% { opacity: 0; }
+        100% { opacity: 1; }
+      }
     </style>
   </head>
   <body id="page-top">
@@ -103,7 +118,7 @@
         <div class="d-flex justify-content-center">
           <div class="text-center">
             <h1 class="mx-auto my-0 text-uppercase">Haitam Feda</h1>
-            <!-- Typing effect target -->
+            <!-- Typing effect -->
             <h2 class="text-white-50 mx-auto mt-2 mb-5">
               <span id="typing-text"></span>
             </h2>
@@ -216,7 +231,7 @@
     <!-- Typing effect script -->
     <script>
       const text = "Electrical & Information Technology Student | Embedded Systems & Robotics Enthusiast";
-      const speed = 60; // typing speed (ms per letter)
+      const speed = 25; // faster typing speed
       let i = 0;
 
       function typeWriter() {
