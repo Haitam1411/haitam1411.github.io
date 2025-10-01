@@ -16,7 +16,7 @@
     <style>
       /* === Custom tweaks === */
       :root {
-        --gold: #d4af37;
+        --gold: #FFD700; /* true gold */
         --dark: #000000;
         --light: #ffffff;
       }
@@ -27,14 +27,14 @@
       }
 
       .btn-primary {
-        background-color: var(--gold);
-        border-color: var(--gold);
-        color: var(--dark);
+        background-color: var(--gold) !important;
+        border-color: var(--gold) !important;
+        color: var(--dark) !important;
       }
 
       .btn-primary:hover {
-        background-color: #b9962f;
-        border-color: #b9962f;
+        background-color: #e6c200 !important;
+        border-color: #e6c200 !important;
       }
 
       .masthead h1 {
@@ -45,6 +45,7 @@
       .project {
         position: relative;
         overflow: hidden;
+        margin-bottom: 30px;
       }
 
       .project .overlay {
@@ -64,6 +65,14 @@
 
       .project:hover .overlay {
         bottom: 0;
+      }
+
+      /* Experience formatting */
+      .experience-block {
+        margin-bottom: 40px;
+      }
+      .experience-block h4 {
+        color: var(--gold);
       }
     </style>
   </head>
@@ -94,7 +103,9 @@
         <div class="d-flex justify-content-center">
           <div class="text-center">
             <h1 class="mx-auto my-0 text-uppercase">Haitam Feda</h1>
-            <h2 class="text-white-50 mx-auto mt-2 mb-5">Electrical & Information Technology Student | Embedded Systems & Robotics Enthusiast</h2>
+            <h2 class="text-white-50 mx-auto mt-2 mb-5">
+              Electrical & Information Technology Student | Embedded Systems & Robotics Enthusiast
+            </h2>
             <a class="btn btn-primary" href="#about">Discover More</a>
           </div>
         </div>
@@ -108,13 +119,13 @@
           <div class="col-lg-8">
             <h2 class="text-white mb-4">About Me</h2>
             <p class="text-white-50">
-              I am a student of Electrical Engineering and Information Technology at <b>RWTH Aachen University</b>, one of the world’s top-ranked engineering schools.  
-              My passion for <b>electronics, robotics, and embedded systems</b> started in my childhood and has grown into a clear career path.  
-              I currently work as a <b>working student</b>, designing electronic boards, industrial control systems, and integrating communication protocols for sensors and valves.
+              Engineering student in <b>Electrical Engineering and Information Technology</b> at 
+              <b>RWTH Aachen University</b>, one of the world’s top-ranked institutions in engineering.  
+              Passionate about <b>electronics, robotics, and embedded systems</b> since childhood.  
+              Currently working as a <b>working student</b>, contributing to the design of electronic boards, industrial control systems, and sensor integration with modern communication protocols.
             </p>
           </div>
         </div>
-        <img class="img-fluid" src="assets/img/ipad.png" alt="device preview" />
       </div>
     </section>
 
@@ -122,7 +133,7 @@
     <section class="projects-section bg-light" id="projects">
       <div class="container px-4 px-lg-5">
         <h2 class="text-center mb-5">Projects</h2>
-        <div class="row gx-0 mb-4 align-items-center">
+        <div class="row gx-0">
           <div class="col-lg-6">
             <div class="project">
               <img class="img-fluid" src="assets/img/demo-image-01.jpg" alt="..." />
@@ -135,6 +146,18 @@
               <div class="overlay">Coming Soon</div>
             </div>
           </div>
+          <div class="col-lg-6">
+            <div class="project">
+              <img class="img-fluid" src="assets/img/bg-masthead.jpg" alt="..." />
+              <div class="overlay">Coming Soon</div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="project">
+              <img class="img-fluid" src="assets/img/bg-signup.jpg" alt="..." />
+              <div class="overlay">Coming Soon</div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -142,13 +165,25 @@
     <!-- Experience -->
     <section class="about-section text-center bg-black" id="experience">
       <div class="container px-4 px-lg-5">
-        <h2 class="text-white mb-4">Experience</h2>
-        <p class="text-white-50">
-          <b>Working Student — Electrical Engineering (2024–present)</b><br>
-          Designing electronics boards, developing control systems for industrial valves & sensors, and implementing communication protocols.<br><br>
-          <b>University Projects — RWTH Aachen</b><br>
-          Coursework in embedded systems, robotics, and information technology.
-        </p>
+        <h2 class="text-white mb-5">Experience</h2>
+        
+        <div class="experience-block">
+          <h4>Working Student – Electrical Engineering</h4>
+          <p class="text-white-50">
+            Contributing to the design and development of electronic boards, 
+            implementation of control systems for industrial valves and sensors, 
+            and integration of communication protocols to support reliable industrial applications.
+          </p>
+        </div>
+        
+        <div class="experience-block">
+          <h4>University Projects – RWTH Aachen</h4>
+          <p class="text-white-50">
+            Participation in academic projects focused on embedded systems, robotics, 
+            and information technology, with an emphasis on practical problem solving 
+            and system integration.
+          </p>
+        </div>
       </div>
     </section>
 
