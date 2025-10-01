@@ -14,7 +14,6 @@
     <!-- Core theme CSS -->
     <link href="css/styles.css" rel="stylesheet" />
     <style>
-      /* === Custom tweaks === */
       :root {
         --gold: #d4af37; /* metallic gold */
         --dark: #000000;
@@ -104,8 +103,9 @@
         <div class="d-flex justify-content-center">
           <div class="text-center">
             <h1 class="mx-auto my-0 text-uppercase">Haitam Feda</h1>
+            <!-- Typing effect target -->
             <h2 class="text-white-50 mx-auto mt-2 mb-5">
-              Electrical & Information Technology Student | Embedded Systems & Robotics Enthusiast
+              <span id="typing-text"></span>
             </h2>
             <a class="btn btn-primary" href="#about">Discover More</a>
           </div>
@@ -212,6 +212,21 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS -->
     <script src="js/scripts.js"></script>
+
+    <!-- Typing effect script -->
+    <script>
+      const text = "Electrical & Information Technology Student | Embedded Systems & Robotics Enthusiast";
+      const speed = 60; // typing speed (ms per letter)
+      let i = 0;
+
+      function typeWriter() {
+        if (i < text.length) {
+          document.getElementById("typing-text").innerHTML += text.charAt(i);
+          i++;
+          setTimeout(typeWriter, speed);
+        }
+      }
+      window.onload = typeWriter;
+    </script>
   </body>
 </html>
-
